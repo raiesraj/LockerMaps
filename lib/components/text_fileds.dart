@@ -7,7 +7,7 @@ class TextFileds extends StatelessWidget {
   final String text;
   final String suffixText;
 
-  const TextFileds({Key? key, required this.text, required this.suffixText})
+  const TextFileds({Key key,  this.text,  this.suffixText})
       : super(key: key);
 
   @override

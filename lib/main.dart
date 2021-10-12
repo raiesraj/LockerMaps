@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 }
 
 class CustomerForm extends StatefulWidget {
-  const CustomerForm({Key? key}) : super(key: key);
+  const CustomerForm({Key key}) : super(key: key);
 
   @override
   _CustomerFormState createState() => _CustomerFormState();
@@ -39,7 +39,7 @@ class _CustomerFormState extends State<CustomerForm> {
   bool _checkbox = false;
   bool _checkbox2 = false;
   String selectedCurrency = 'Express Mail 1-2 Days';
-  var currentSeclectedValue;
+  String currentSeclectedValue;
   var selectedvalue;
 
   @override
@@ -168,7 +168,7 @@ class _CustomerFormState extends State<CustomerForm> {
                             ],
                             onChanged: (value) {
                               setState(() {
-                                selectedCurrency = value!;
+                                selectedCurrency = value;
                               });
                             },
                             hint: Text('Express Mail 1-2 Days'),
@@ -326,12 +326,12 @@ class _CustomerFormState extends State<CustomerForm> {
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
           ),
-          child: DropdownButton(
+          child: DropdownButton<String>(
             value: currentSeclectedValue,
             items: items.map((String items) {
               return DropdownMenuItem(
                 child: Text(
-                  items,
+                  "$items",
                   style: TextStyle(
                     height: 2,
                     color: Colors.black,
@@ -343,8 +343,9 @@ class _CustomerFormState extends State<CustomerForm> {
               );
             }).toList(),
             onChanged: (newvalue) {
-              setState(() {
-                currentSeclectedValue = newvalue;
+              print("SELETED ITEM : $newvalue");
+               setState(() {
+                 currentSeclectedValue = newvalue.toString();
               });
             },
             hint: Text('Flat Rate Boxes'),

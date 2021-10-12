@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class SubmitButton extends StatelessWidget {
   const SubmitButton({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

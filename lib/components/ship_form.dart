@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TextFiled extends StatelessWidget {
   final String text;
 
-  const TextFiled({Key? key, required this.text}) : super(key: key);
+  const TextFiled({Key key,  this.text}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(

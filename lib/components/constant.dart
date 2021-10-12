@@ -1,13 +1,13 @@
+//carrier box data is here
 var items2 = [
   "UPS",
   "USPS",
   "FedEx",
   "DHL",
 ];
-
-var items =[
-
-  'USPS Letter Envelope\n12 1/2" x 9 1/2"',
+//flat box data is here
+var items = <String>[
+  'USPS Letter Envelope\n 12 1/2" x 9 1/2" ',
   'USPS Gift Card\n10" x 7"',
   'USPS Window Envelopes\n10" x 6"',
   'USPS Small Envelopes\n10" x 6"',
